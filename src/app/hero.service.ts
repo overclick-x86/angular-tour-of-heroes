@@ -76,4 +76,10 @@ export class HeroService {
       );
   }
 
+  searchHeroes(term: string): Observable<Hero[]> {
+    if (!term.trim) {
+      return of([]);
+    }
+  }
+
 }
